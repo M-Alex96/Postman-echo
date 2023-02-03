@@ -19,7 +19,7 @@ public class PostmanEchoTest {
 // Проверки
                 .then()
                 .statusCode(200)
-                .body("data", equalTo("wrong data"));
+                .body("data", equalTo("some data"));
     }
 
     @Test
@@ -33,7 +33,7 @@ public class PostmanEchoTest {
                 .post("/post")
                 .then()
                 .statusCode(200)
-                .body("data", equalTo("Тесто"));
+                .body("data", equalTo("Тест"));
     }
 
     @Test
@@ -46,6 +46,6 @@ public class PostmanEchoTest {
                 .post("/post")
                 .then()
                 .statusCode(200)
-                .body("data", equalTo("135"));
+                .body("data", equalTo("134"));
     }
 }
